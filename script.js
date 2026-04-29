@@ -1,11 +1,18 @@
-const navbarMenu = document.querySelector(".navbar .links");
-const formPopup = document.querySelector(".form-popup");
-// const signupLoginLink = formPopup.querySelectorAll(".bottom-link a");
-const signup = document.getElementById("signup-link");
 
-signup.addEventListener("click", (e) => {
-    console.log("Clicked");
+const loginForm = document.getElementById("login-form");
+const signupForm = document.getElementById("signup-form");
+const signupBtn = document.getElementById("signup-link");
+const loginBtn = document.getElementById("log-in-btn");
+
+loginBtn.addEventListener("click", (e) => {
+    console.log("login btn clicked");
 })
+
+
+signupBtn.addEventListener("click", (e) => {
+    loginForm.style.display = "none";
+    signupForm.style.display = "block";
+})  
 
 // Show or hide signup form
 // signupLoginLink.forEach(link => {
