@@ -13,14 +13,17 @@ body {
     width: 100%;
 }
 
+:root {
+    --primary-color: #00bcd4;
+    --primary-color-hover: #0097a7;
+}
+
 .form-popup {
     position: fixed;
     top: 50%;
     left: 50%;
     z-index: 10;
     width: 100%;
-    /* opacity: 0; */
-    pointer-events: none;
     max-width: 720px;
     background: #fff;
     border: 2px solid #fff;
@@ -168,12 +171,12 @@ form button {
     border-radius: 3px;
     cursor: pointer;
     margin: 25px 0;
-    background: #00bcd4;
+    background: var(--primary-color);
     transition: 0.2s ease;
 }
 
 form button:hover {
-    background: #0097a7;
+    background: var(--primary-color-hover);
 }
 
 .form-content .bottom-link {
@@ -199,6 +202,14 @@ form button:hover {
     width: 14px;
     height: 14px;
     margin-right: 7px;
+}
+
+#signup-link {
+    background-color: transparent;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 @media (max-width: 760px) {
